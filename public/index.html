@@ -1,11 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <script  type="module" src="script.js"></script>
+
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <form id="expense-form">
+      <input type="text" id="title" placeholder="Expense name" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="currency">
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <h2>Total: ₹<span id="total">0</span></h2>
+
+    <div id="expense-list"></div>
+  </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
